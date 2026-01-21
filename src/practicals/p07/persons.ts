@@ -3,7 +3,7 @@ type Condition<T> = (item: T) => boolean;
 interface Person {
   firstName?: string | null;
   lastName?: string | null;
-  age?: number | null;
+  age: number;
 }
 
 const persons: Person[] = [
@@ -18,7 +18,7 @@ const persons: Person[] = [
 
 export function sortPersons(persons: Person[]): Person[] {
   //let filteredUsers = persons.filter(p => p.firstName !== "" && p.lastName !== "" && p.age !== null && p.age >= 100)
-  let filteredUsers = persons.filter(p => (p.age > 1))
+  let filteredUsers = persons.filter(p =>  p.firstName !== "" && p.lastName !== "" && p.age !== null && p?.age <= 100 && p?.age > 0)
   return filteredUsers
 }
 console.log(sortPersons(persons))
