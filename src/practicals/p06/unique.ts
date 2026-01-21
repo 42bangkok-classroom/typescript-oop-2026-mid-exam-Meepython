@@ -1,4 +1,4 @@
-function getUniqueNumbers(arr1: number[], arr2: number[]): void { //number[]
+export function getUniqueNumbers(arr1: number[], arr2: number[]): void { //number[]
   // Write your code below
   const newArray: number[] = [... new Set([...arr1, ...arr2])]
   console.log(newArray)

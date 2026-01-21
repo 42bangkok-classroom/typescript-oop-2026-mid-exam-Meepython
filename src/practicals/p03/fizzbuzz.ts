@@ -2,7 +2,7 @@
 const input:number = Number(process.argv[2])
 
 if (Number.isNaN(input) || input === null || input <= 0) {
-    process.exit(0)
+    
 }
 
 for (let index = 1; index <= input; index++) {
