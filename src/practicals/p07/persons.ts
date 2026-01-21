@@ -1,11 +1,10 @@
+type Condition<T> = (item: T) => boolean;
+
 interface Person {
-  firstName?: string;
-  lastName?: string;
-  age?: number;
+  firstName?: string | null;
+  lastName?: string | null;
+  age?: number | null;
 }
-
-function sortPersons(persons: Person[]): Person[] {}
-
 
 const persons: Person[] = [
   { firstName: "Somchai", lastName: "Jaidee", age: 30 },
@@ -16,3 +15,10 @@ const persons: Person[] = [
   { firstName: "Jane", lastName: "Smith", age: -5 },
   { lastName: "NoName", age: 40 }
 ];
+
+export function sortPersons(persons: Person[]): Person[] {
+  //let filteredUsers = persons.filter(p => p.firstName !== "" && p.lastName !== "" && p.age !== null && p.age >= 100)
+  let filteredUsers = persons.filter(p => (p.age > 1))
+  return filteredUsers
+}
+console.log(sortPersons(persons))
