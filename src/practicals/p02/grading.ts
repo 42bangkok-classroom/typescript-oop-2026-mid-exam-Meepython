@@ -3,12 +3,10 @@ const grade:number = Number(process.argv[2])
 
 if (Number.isNaN(grade) || grade === null) {
   console.log("Invalid input")
-  process.exit(0)
 }
 
 if (grade < 0 || grade > 100) {
     console.log("Invalid input")
-    process.exit(0)
   }
 
 if (grade >= 80) {
@@ -23,6 +21,5 @@ if (grade >= 80) {
     console.log("Grade is F")
 } else {
     console.log("Invalid input")
-    process.exit(0)
 }
 
